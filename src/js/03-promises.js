@@ -30,7 +30,7 @@ function onFormSubmit(event){
     delay += step
     createPromise(i, delay)
       .then(({ position, delay }) => {
-      setTimeout(() => { Notify.failure(`✅ Fulfilled promise ${position} in ${delay}ms`) }, delay)
+      setTimeout(() => { Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`) }, delay)
     })
       .catch(({ position, delay }) => {
         setTimeout(() => { Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`) }, delay)
